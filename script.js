@@ -9,7 +9,7 @@ console.log({inputTransactionName, inputTransactionAmount})
 
 
 
-const dummyTransactions = [
+let dummyTransactions = [
 
     {id: 1, name: 'Bolo de Brigadeiro', amount: -20},
     {id: 2, name: 'Salário', amount: 300},
@@ -17,11 +17,10 @@ const dummyTransactions = [
     {id: 4, name: 'Violão', amount: 150}
 ]
 
-const removeTransaction = ID => {
+let removeTransaction = ID => {
     dummyTransactions = dummyTransactions.filter(transaction => transaction.id !== ID)
     init()
 }
-
 
 
 const addTransactionIntoDOM = transaction => {
